@@ -1,0 +1,116 @@
+@import './styles/variables.scss';
+
+.App {
+  background-color: #242830;
+  height: 100vh;
+  text-align: center;
+  width: 100%;
+
+  .app-title {
+    color: $primaryWhite;
+    font-size: 28px;
+    h1 {
+      margin: 0;
+      padding-top: 50px;
+    }
+  }
+  .app-info {
+    color: $primaryWhite;
+    font-size: 20px;
+    width: 40%;
+    margin: auto;
+    padding: 40px 0;
+  }
+  .react-3d-carousel {
+    height: 60vh !important;
+  }
+
+  .react-3d-carousel .slider-container .slider-right > div {
+    padding: 15px 18px;
+    border-top: 2px solid $primaryLightRed;
+    border-right: 2px solid $primaryLightRed;
+    border-bottom: 2px solid $primaryLightRed;
+    border-left: 2px solid $primaryLightRed;
+    border-radius: 50%;
+  }
+  .react-3d-carousel .slider-container .slider-right > div > i {
+    transform: translate(5%, -10%);
+    color: $primaryLightRed;
+  }
+  .react-3d-carousel .slider-container .slider-left > div {
+    padding: 15px 18px;
+    border-top: 2px solid $primaryLightRed;
+    border-right: 2px solid $primaryLightRed;
+    border-bottom: 2px solid $primaryLightRed;
+    border-left: 2px solid $primaryLightRed;
+    border-radius: 50%;
+  }
+
+  .react-3d-carousel .slider-container .slider-left > div > i {
+    transform: translate(5%, -10%);
+    color: $primaryLightRed;
+  }
+
+  .MuiButtonBase-root {
+    margin-top: 15px;
+    border-radius: 20px;
+    padding: 12px 24px;
+    background-color: $primaryLightRed;
+    color: $primaryWhite;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .App {
+    .app-title {
+      font-size: 16px;
+    }
+    .app-info {
+      font-size: 12px;
+      width: 80%;
+    }
+    .react-3d-carousel {
+      height: 40vh !important;
+    }
+    .react-3d-carousel .slider-container .slider-left {
+      margin-right: 20px;
+    }
+    .react-3d-carousel .slider-container .slider-right {
+      margin-left: 10px;
+    }
+    .react-3d-carousel .slider-container .slider-left > div {
+      padding: 5px 8px;
+    }
+    .react-3d-carousel .slider-container .slider-right > div {
+      padding: 5px 8px;
+    }
+    .MuiButtonBase-root {
+      padding: 6px 12px;
+      span {
+        font-size: 10px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .App {
+    .react-3d-carousel .slider-container .slider-left {
+      right: 113%;
+    }
+    .react-3d-carousel .slider-container .slider-right {
+      left: 111%;
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 575px) {
+  .App {
+    .react-3d-carousel .slider-container .slider-left {
+      right: 105%;
+    }
+    .react-3d-carousel .slider-container .slider-right {
+      left: 103%;
+    }
+  }
+}

@@ -1,0 +1,64 @@
+@import '../../styles/variables.scss';
+
+.image__container {
+  width: 50%;
+  background: $primaryWhite;
+
+  &__info {
+    p {
+      width: 65%;
+      margin: auto;
+    }
+  }
+  &__img {
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .MuiButtonBase-root {
+    margin: 15px 0;
+    border-radius: 20px;
+    padding: 12px 24px;
+    background-color: $primaryLightRed;
+  }
+}
+.active {
+  .slider-single-content {
+    .image__container {
+      .MuiButtonBase-root {
+        visibility: visible;
+      }
+    }
+  }
+}
+
+.proactive,
+.preactive .slider-single-content {
+  .image__container {
+    .MuiButtonBase-root {
+      visibility: hidden;
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .image__container {
+    width: unset;
+    &__info {
+      h1 {
+        font-size: 16px;
+      }
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .image__container {
+    width: 80%;
+  }
+}
